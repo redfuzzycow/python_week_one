@@ -56,3 +56,41 @@ while word != "":
 word_list.sort()
 
 print(word_list)
+
+#print moo n times
+
+def printMoo(n):
+	for x in range(n):
+		print("moo")
+
+printMoo(3)
+
+#roman numeral
+
+def old_roman_numeral(number: int):
+	roman_numeral = ""
+	while number>0:
+		if number >= 1000:
+			roman_numeral += "M"
+			number -= 1000
+		elif number >=500:
+			roman_numeral += "D"
+			number -=500
+		elif number >=100:
+			roman_numeral += "C"
+			number -= 100
+		elif number >= 50:
+			roman_numeral += "l"
+			number-= 50
+		elif number >= 10:
+			roman_numeral += "X"
+			number -= 10
+		elif number >= 5:
+			roman_numeral += "V"
+			number -= 5
+		elif number >= 1:
+			roman_numeral += "I"
+			number -= 1
+	return roman_numeral
+
+print(old_roman_numeral(333))
